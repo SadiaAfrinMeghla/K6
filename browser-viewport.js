@@ -6,8 +6,8 @@ export const options = {
     scenarios: {
         browser_test: {
             executor: 'constant-vus', // Uses a fixed number of virtual users for a specific duration
-            vus: 2,                   // Number of virtual users
-            duration: '15s',          // Duration for which the test runs
+            vus: 1,                   // Number of virtual users
+            duration: '5s',          // Duration for which the test runs
             options: {
                 browser: {
                     type: 'chromium', // Specifies browser type (Currently, only Chromium is supported)
@@ -26,7 +26,7 @@ export default async function () {
         height: 812
     }); // Set viewport size for a mobile-like resolution
 
-    await page.goto('https://www.google.com'); // Navigate to the target URL
+    await page.goto('https://greenifyai.com/'); // Navigate to the target URL
 
     await page.screenshot({
         fullPage: true,
